@@ -1,0 +1,22 @@
+{
+  "name": "memebot",
+  "version": "1.0.0",
+  "description": "Small chatbot made for memes",
+  "main": "app.js",
+  "scripts": {
+    "test": "haha no"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iPwnPancakes/memebot.git"
+  },
+  "author": "Daniel Buenrrostro <danielbuenrrostro1997@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iPwnPancakes/memebot/issues"
+  },
+  "homepage": "https://github.com/iPwnPancakes/memebot#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

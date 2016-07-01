@@ -1,0 +1,8 @@
+Where I stopped last session:
+-The page successfully listens to all messages sent to it and sends it back to
+the same text to the user
+
+TODO:
+Have the bot respond back with an image of kappa
+
+-Delete the console.logging of the messages received

@@ -1,14 +1,14 @@
 {
-  "name": "kik_memebot",
+  "name": "memebot",
   "version": "0.0.0",
   "description": "Bot meant to take commands",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "hahahahaha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iPwnPancakes/kik_memebot.git"
+    "url": "git+https://github.com/iPwnPancakes/memebot.git"
   },
   "keywords": [
     "meme",
@@ -21,7 +21,12 @@
   "author": "Daniel Buenrrostro <danielbuenrrostro1997@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iPwnPancakes/kik_memebot/issues"
+    "url": "https://github.com/iPwnPancakes/memebot/issues"
   },
-  "homepage": "https://github.com/iPwnPancakes/kik_memebot#readme"
+  "homepage": "https://github.com/iPwnPancakes/memebot#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "request": "^2.72.0"
+  }
 }

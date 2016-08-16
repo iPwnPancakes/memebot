@@ -8,7 +8,7 @@ let Bot  = require('@kikinteractive/kik');
 let bot = new Bot({
     username: 'echo.bot',
     apiKey: '259135bf-b2eb-4dfd-9d41-0198fede2d47',
-    baseUrl: 'https://github.com/iPwnPancakes/kik_memebot.git'
+    baseUrl: 'https://github.com/iPwnPancakes/memebot.git'
 });
 
 bot.updateBotConfiguration();

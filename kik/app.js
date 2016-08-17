@@ -15,13 +15,21 @@ const MemeEnum = {
     trigger : 'kappa',
     url : 'https://res.cloudinary.com/urbandictionary/image/upload/a_exif,c_fit,h_200,w_200/v1395991705/gjn81wvxqsq6yzcwubok.png'
   },
-  POGCHAMP : {
-    trigger : 'pogchamp',
-    url : 'http://ih1.redbubble.net/image.139973808.1307/flat,800x800,075,f.u3.jpg'
-  },
   BEANS : {
-    trigger : 'youve just been beaned',
+    trigger : 'bean em',
     url : 'https://pics.onsizzle.com/Facebook-308722.png'
+  },
+  ASS : {
+    trigger : 'me',
+    url : 'http://i.imgur.com/fupUJJa.png'
+  },
+  FARMER : {
+    trigger : 'meme farmer',
+    url : 'http://i.imgur.com/qzvLwgJ.png'
+  },
+  BEE : {
+    trigger : 'kilk me',
+    url : 'http://i.imgur.com/VtrvOFh.jpg'
   }
 }
 
@@ -41,11 +49,15 @@ app.post('/incoming/', function(req, res) {
     /** Handle meme triggers. Default should be changed to doing nothing. Should still probably log the original message though.
 
     */
-    if(currentMsg.body !== undefined {
-      if(currentMsg.body.toLowerCase() === MemeEnum.KAPPA.trigger) {
-       sendPictureMessage(MemeEnum.KAPPA.url, currentMsg.from, currentMsg.chatId);
-      } else {
-        sendTextMessage(currentMsg.body, currentMsg.from, currentMsg.chatId);
+    if(currentMsg.body !== undefined) {
+      switch(currentMsg.body.toLowerCase()) {
+        case MemeEnum.KAPPA.trigger : sendPictureMessage(MemeEnum.KAPPA.url, currentMsg.from, currentMsg.chatId); break;
+        case MemeEnum.BEANS.trigger : sendPictureMessage(MemeEnum.BEANS.url, currentMsg.from, currentMsg.chatId); break;
+        case MemeEnum.ASS.trigger : sendPictureMessage(MemeEnum.ASS.url, currentMsg.from, currentMsg.chatId); break;
+        case MemeEnum.FARMER.trigger : sendPictureMessage(MemeEnum.FARMER.url, currentMsg.from, currentMsg.chatId); break;
+        case MemeEnum.BEE.trigger : sendPictureMessage(MemeEnum.BEE.url, currentMsg.from, currentMsg.chatId); break;
+        case 'help' : sendTextMessage('Format [Meme, trigger]\nSupported memes: \nKappa:kappa\nBeans:bean em\nDatAss:me\nMemeFarmer:meme farmer\nBee:kilk me', currentMsg.from, currentMsg.chatId); break;
+        default : sendTextMessage(currentMsg.body, currentMsg.from, currentMsg.chatId); break;
       }
     }
   }

@@ -3,8 +3,8 @@
 Memebot is a small utility chat bot designed to spread memes over group chats.
 
 Memebot is currently supported on two platforms:
--Facebook
--Kik
+--Facebook
+--Kik
 
 Memebot scans each message event for "trigger words" and if detected, sends the corresponding response.
 

@@ -19,7 +19,7 @@ const MemeEnum = {
     trigger : 'bean em',
     url : 'https://pics.onsizzle.com/Facebook-308722.png'
   },
-  ASS : {
+  HI : {
     trigger : 'me',
     url : 'http://i.imgur.com/fupUJJa.png'
   },
@@ -53,7 +53,7 @@ app.post('/incoming/', function(req, res) {
       switch(currentMsg.body.toLowerCase()) {
         case MemeEnum.KAPPA.trigger : sendPictureMessage(MemeEnum.KAPPA.url, currentMsg.from, currentMsg.chatId); break;
         case MemeEnum.BEANS.trigger : sendPictureMessage(MemeEnum.BEANS.url, currentMsg.from, currentMsg.chatId); break;
-        case MemeEnum.ASS.trigger : sendPictureMessage(MemeEnum.ASS.url, currentMsg.from, currentMsg.chatId); break;
+        case MemeEnum.HI.trigger : sendPictureMessage(MemeEnum.HI.url, currentMsg.from, currentMsg.chatId); break;
         case MemeEnum.FARMER.trigger : sendPictureMessage(MemeEnum.FARMER.url, currentMsg.from, currentMsg.chatId); break;
         case MemeEnum.BEE.trigger : sendPictureMessage(MemeEnum.BEE.url, currentMsg.from, currentMsg.chatId); break;
         case 'help' : sendTextMessage('Format [Meme, trigger]\nSupported memes: \nKappa:kappa\nBeans:bean em\nDatAss:me\nMemeFarmer:meme farmer\nBee:kilk me', currentMsg.from, currentMsg.chatId); break;
